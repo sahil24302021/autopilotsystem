@@ -274,7 +274,7 @@ export default function Home() {
               initial={{ y: "108%" }} animate={{ y: loading ? "108%" : "0%" }}
               transition={{ duration: 1.15, ease: [0.76, 0, 0.24, 1], delay: 1.26 }}
               className="font-black uppercase tracking-tighter leading-[0.82] text-transparent"
-              style={{ fontSize: "clamp(3.2rem, 13.5vw, 13rem)", WebkitTextStroke: "1.5px rgba(255,255,255,0.8)" }}
+              style={{ fontSize: "clamp(3.2rem, 13.5vw, 13rem)", WebkitTextStroke: "1px rgba(255,255,255,0.55)" }}
             >
               Supremacy.
             </motion.h1>
