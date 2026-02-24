@@ -6,9 +6,10 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, company, budget, objective } = body;
+    const { name, email, company, service, message, budget, objective } = body;
+    const projectDetails = message || objective;
 
-    if (!name || !email || !objective) {
+    if (!name || !email || !projectDetails) {
       return NextResponse.json({ message: "Missing required fields" }, { status: 400 });
     }
 
@@ -44,12 +45,12 @@ export async function POST(request: Request) {
               <td style="padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.05); color: #fff; font-size: 15px; font-weight: 700;">${company || "Not specified"}</td>
             </tr>
             <tr>
-              <td style="padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.05); color: #555; font-size: 10px; text-transform: uppercase; letter-spacing: 3px;">Budget</td>
-              <td style="padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.05); color: #fff; font-size: 15px; font-weight: 700;">${budget || "Not specified"}</td>
+              <td style="padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.05); color: #555; font-size: 10px; text-transform: uppercase; letter-spacing: 3px;">Service</td>
+              <td style="padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.05); color: #fff; font-size: 15px; font-weight: 700;">${service || "Not specified"}</td>
             </tr>
             <tr>
-              <td style="padding: 14px 0; color: #555; font-size: 10px; text-transform: uppercase; letter-spacing: 3px; vertical-align: top; padding-top: 20px;">Project Brief</td>
-              <td style="padding: 14px 0; color: #d8d8d8; font-size: 15px; line-height: 1.7; padding-top: 20px;">${objective}</td>
+              <td style="padding: 14px 0; color: #555; font-size: 10px; text-transform: uppercase; letter-spacing: 3px; vertical-align: top; padding-top: 20px;">Project Details</td>
+              <td style="padding: 14px 0; color: #d8d8d8; font-size: 15px; line-height: 1.7; padding-top: 20px;">${projectDetails}</td>
             </tr>
           </table>
 
