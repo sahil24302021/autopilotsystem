@@ -74,7 +74,7 @@ export default function UpgradesPage() {
             className="font-black uppercase tracking-tighter leading-[0.85] text-white"
             style={{ fontSize: "clamp(2.8rem, 10vw, 10rem)" }}>
             System{" "}
-            <span className="text-transparent" style={{ WebkitTextStroke: "1.5px rgba(255,255,255,0.35)" }}>Upgrades.</span>
+            <span className="text-white/25">Upgrades.</span>
           </motion.h1>
         </div>
         <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
@@ -163,7 +163,7 @@ export default function UpgradesPage() {
           <h2 className="font-black uppercase tracking-tighter leading-[0.88] text-white"
             style={{ fontSize: "clamp(2rem, 6vw, 6rem)" }}>
             Let's build{" "}
-            <span className="text-transparent" style={{ WebkitTextStroke: "1.5px rgba(255,255,255,0.35)" }}>together.</span>
+            <span className="text-white/25">together.</span>
           </h2>
         </motion.div>
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}

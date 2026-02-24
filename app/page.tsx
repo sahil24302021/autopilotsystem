@@ -192,8 +192,8 @@ export default function Home() {
               <div className="overflow-hidden">
                 <motion.div initial={{ y: "105%" }} animate={{ y: "0%" }}
                   transition={{ duration: 1.0, ease: [0.76, 0, 0.24, 1], delay: 0.38 }}
-                  className="font-black uppercase leading-none tracking-tighter text-transparent"
-                  style={{ fontSize: "clamp(3rem, 13vw, 11rem)", WebkitTextStroke: "1.5px rgba(255,255,255,0.22)" }}>
+                  className="font-black uppercase leading-none tracking-tighter text-white/20"
+                  style={{ fontSize: "clamp(3rem, 13vw, 11rem)" }}>
                   SYSTEMS
                 </motion.div>
               </div>
@@ -455,10 +455,9 @@ export default function Home() {
                   initial={{ y: "105%" }} whileInView={{ y: "0%" }}
                   viewport={{ once: true }}
                   transition={{ duration: 1, ease: [0.76, 0, 0.24, 1], delay: i * 0.12 }}
-                  className={`font-black uppercase tracking-tighter leading-none ${i === 2 ? "text-transparent" : "text-white"}`}
+                  className={`font-black uppercase tracking-tighter leading-none ${i === 2 ? "text-white/20" : "text-white"}`}
                   style={{
                     fontSize: "clamp(2.8rem, 10vw, 10rem)",
-                    ...(i === 2 ? { WebkitTextStroke: "1.5px rgba(255,255,255,0.22)" } : {}),
                   }}
                 >
                   {line}
@@ -522,7 +521,7 @@ export default function Home() {
                   >
                     {s.title.split(" ").map((word, wi, arr) =>
                       wi === arr.length - 1
-                        ? <span key={wi} className="text-transparent" style={{ WebkitTextStroke: "1.5px rgba(255,255,255,0.45)" }}>{word}</span>
+                        ? <span key={wi} className="text-white/30">{word}</span>
                         : <span key={wi}>{word} </span>
                     )}
                   </motion.h2>
@@ -602,7 +601,7 @@ export default function Home() {
             <h2 className="font-black uppercase tracking-tighter leading-[0.88] text-white mb-5 md:mb-6"
               style={{ fontSize: "clamp(2rem, 6vw, 6rem)" }}>
               No templates.<br />
-              <span className="text-transparent" style={{ WebkitTextStroke: "1.5px rgba(255,255,255,0.38)" }}>No compromises.</span>
+              <span className="text-white/25">No compromises.</span>
             </h2>
             <a href="/case-studies"
               className="inline-flex items-center gap-3 font-mono text-[9px] uppercase tracking-[0.35em] text-white/60 hover:text-white border-b border-white/15 hover:border-white pb-1 transition-all duration-300 touch-manipulation">

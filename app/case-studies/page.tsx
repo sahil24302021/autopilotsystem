@@ -100,7 +100,7 @@ export default function CaseStudiesPage() {
             className="font-black uppercase tracking-tighter leading-[0.85] text-white"
             style={{ fontSize: "clamp(2.8rem, 10vw, 10rem)" }}>
             Case{" "}
-            <span className="text-transparent" style={{ WebkitTextStroke: "1.5px rgba(255,255,255,0.35)" }}>Studies.</span>
+            <span className="text-white/25">Studies.</span>
           </motion.h1>
         </div>
         <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}

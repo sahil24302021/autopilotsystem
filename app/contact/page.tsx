@@ -87,7 +87,7 @@ export default function ContactPage() {
                 className="font-black uppercase tracking-tighter leading-[0.85] text-white mb-6 md:mb-8"
                 style={{ fontSize: "clamp(2.8rem, 8vw, 8rem)" }}>
                 Let's<br />
-                <span className="text-transparent" style={{ WebkitTextStroke: "1.5px rgba(255,255,255,0.35)" }}>Work.</span>
+                <span className="text-white/25">Work.</span>
               </motion.h1>
             </div>
 
